@@ -1,4 +1,4 @@
-![10](https://github.com/YunusEmreMaral/Mvc_Proje_Kamp/assets/108576886/9c56cbf9-67b4-4744-92ab-fca700d64bbf)# Mvc Proje Kamp - Sözlük
+# Mvc Proje Kamp - Sözlük
 
 ## Projenin Amacı ve Yapılabilenler
 - Yazarlar, kendi başlıklarını oluşturabilir ve bütün  başlıklar altında içerik ekleyebilir.
