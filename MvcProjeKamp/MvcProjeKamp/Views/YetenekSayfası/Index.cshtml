@@ -1,0 +1,37 @@
+﻿@model List<Skill>
+
+@{
+    ViewBag.Title = "Yetenek Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yetenek Listesi</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Yetenek Adı</th>
+            <th>Açıklama</th>
+            <th>Değer</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var skill in Model)
+        {
+            <tr>
+                <td>@skill.SkillId</td>
+                <td>@skill.SkillName</td>
+                <td>@skill.Description</td>
+                <td>@skill.SkillValue%</td>
+                <td>
+                    <a href="@Url.Action("Arttir", new { id = skill.SkillId })" class="btn btn-success">Arttır</a>
+                    <a href="@Url.Action("Azalt", new { id = skill.SkillId })" class="btn btn-warning">Azalt</a>
+                    <a href="@Url.Action("Sil", new { id = skill.SkillId })" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

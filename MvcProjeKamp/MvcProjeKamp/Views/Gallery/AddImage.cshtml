@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.ImageFile
+
+@{
+    ViewBag.Title = "AddImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Add Image</h2>
+
+@using (Html.BeginForm("AddImage", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.im)
+        @Html.TextBoxFor(model => model.ImageName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImagePath)
+        <input type="file" name="file" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Image</button>
+}
